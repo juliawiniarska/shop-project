@@ -1,0 +1,59 @@
+.sub-menu-container {
+    display: flex;
+    justify-content: center;
+    background-color: #b46a71;
+    padding: 10px 0;
+  }
+  
+  .sub-menu-button {
+    background: none;
+    border: none;
+    color: white; 
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-transform: uppercase; 
+    font-weight: bold; 
+    cursor: pointer;
+  }
+  
+  .sub-menu-button:hover {
+    background-color: #555; 
+  }
+  
+  .sub-menu-button.active {
+    color: #fce4da;
+    border-bottom: 2px solid #fce4da;
+  }
+  
+  .content {
+    color: white;
+  }
+  
+  .sub-menu-button {
+    position: relative;
+  }
+  
+  .brands-dropdown {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background: #b46a71; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    width: 200px;
+    display: none;
+  }
+  
+  .sub-menu-button:hover .brands-dropdown {
+    display: block; 
+  }
+  
+  .brand-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .brand-item:hover {
+    background-color: #555;
+  }
+  
