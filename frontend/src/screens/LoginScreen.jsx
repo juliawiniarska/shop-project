@@ -49,7 +49,7 @@ const LoginScreen = () => {
 
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-3' controlId='email'>
-          <Form.Label>=Email</Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type='email'
             placeholder='Enter email'
