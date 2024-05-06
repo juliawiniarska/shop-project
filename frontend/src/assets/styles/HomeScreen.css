@@ -1,0 +1,44 @@
+  .equal-height-cols {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .equal-height-cols > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .equal-height-cols > [class*="col-"] > * {
+    flex: 1;
+    margin-bottom: 15px; 
+  }
+  
+  .baner {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    width: auto; 
+    text-align: center; 
+  }
+  .spacer {
+    height: 40px; 
+  }
+  
+  .baner-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 400px; 
+    object-fit: contain; 
+  }
+  
+@media (max-width: 1105px) {
+    .baner {
+      display: none;
+    }
+  }
+  
+  

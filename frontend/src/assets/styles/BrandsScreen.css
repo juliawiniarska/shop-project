@@ -1,0 +1,14 @@
+
+.obrazek-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .obrazek {
+    transition: transform 0.2s;
+  }
+  
+  .obrazek-container:hover .obrazek {
+    transform: translateY(-5px);
+  }
+  
