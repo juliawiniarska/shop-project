@@ -4,8 +4,13 @@ const orderSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
+<<<<<<< HEAD
       ref: 'User', 
       required: function() { return !this.guestInfo; },
+=======
+      required: true,
+      ref: 'User',
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
     },
     orderItems: [
       {
@@ -72,6 +77,7 @@ const orderSchema = mongoose.Schema(
     deliveredAt: {
       type: Date,
     },
+<<<<<<< HEAD
     discountCode: { 
       type: String
     },
@@ -79,6 +85,8 @@ const orderSchema = mongoose.Schema(
       name: { type: String },
       email: { type: String }
     }
+=======
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
   },
   {
     timestamps: true,
@@ -87,4 +95,8 @@ const orderSchema = mongoose.Schema(
 
 const Order = mongoose.model('Order', orderSchema);
 
+<<<<<<< HEAD
 export default Order;
+=======
+export default Order;
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083

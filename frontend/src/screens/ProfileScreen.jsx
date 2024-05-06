@@ -33,7 +33,11 @@ const ProfileScreen = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
+<<<<<<< HEAD
       toast.error('Hasła nie są identyczne');
+=======
+      toast.error('The passwords are not identical');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
     } else {
       try {
         const res = await updateProfile({
@@ -43,7 +47,11 @@ const ProfileScreen = () => {
           password,
         }).unwrap();
         dispatch(setCredentials({ ...res }));
+<<<<<<< HEAD
         toast.success('Profil zaktualizowany pomyślnie');
+=======
+        toast.success('Profile updated successfully');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       } catch (err) {
         toast.error(err?.data?.message || err.error);
       }
@@ -57,10 +65,17 @@ const ProfileScreen = () => {
 
         <Form onSubmit={submitHandler}>
           <Form.Group className='my-2' controlId='name'>
+<<<<<<< HEAD
             <Form.Label>Imię</Form.Label>
             <Form.Control
               type='text'
               placeholder='Wpisz imię'
+=======
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type='text'
+              placeholder='Enter name'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               value={name}
               onChange={(e) => setName(e.target.value)}
             ></Form.Control>
@@ -70,40 +85,66 @@ const ProfileScreen = () => {
             <Form.Label>Email</Form.Label>
             <Form.Control
               type='email'
+<<<<<<< HEAD
               placeholder='Wpisz email'
+=======
+              placeholder='Enter email'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             ></Form.Control>
           </Form.Group>
 
           <Form.Group className='my-2' controlId='password'>
+<<<<<<< HEAD
             <Form.Label>Hasło</Form.Label>
             <Form.Control
               type='password'
               placeholder='Wpisz hasło'
+=======
+            <Form.Label>Password</Form.Label>
+            <Form.Control
+              type='password'
+              placeholder='Enter password'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
 
           <Form.Group className='my-2' controlId='confirmPassword'>
+<<<<<<< HEAD
             <Form.Label>Potwierdź hasło</Form.Label>
             <Form.Control
               type='password'
               placeholder='Potwierdź hasło'
+=======
+            <Form.Label>Confirm password</Form.Label>
+            <Form.Control
+              type='password'
+              placeholder='Confirm password'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             ></Form.Control>
           </Form.Group>
 
           <Button type='submit' variant='primary'>
+<<<<<<< HEAD
             Zaktualizuj
+=======
+            Update
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           </Button>
           {loadingUpdateProfile && <Loader />}
         </Form>
       </Col>
       <Col md={9}>
+<<<<<<< HEAD
         <h2>Moje zamówienia</h2>
+=======
+        <h2>My orders</h2>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         {isLoading ? (
           <Loader />
         ) : error ? (
@@ -115,10 +156,17 @@ const ProfileScreen = () => {
             <thead>
               <tr>
                 <th>ID</th>
+<<<<<<< HEAD
                 <th>DATA</th>
                 <th>SUMA</th>
                 <th>ZAPŁACONE</th>
                 <th>DOSTARCZONE</th>
+=======
+                <th>DATE</th>
+                <th>SUMMARY</th>
+                <th>PAID</th>
+                <th>DELIVERED</th>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 <th></th>
               </tr>
             </thead>
@@ -145,7 +193,11 @@ const ProfileScreen = () => {
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
                       <Button className='btn-sm' variant='light'>
+<<<<<<< HEAD
                       Szczegóły
+=======
+                      Details
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                       </Button>
                     </LinkContainer>
                   </td>

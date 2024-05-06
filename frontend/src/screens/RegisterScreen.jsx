@@ -36,7 +36,11 @@ const RegisterScreen = () => {
     e.preventDefault();
 
     if (password !== confirmPassword) {
+<<<<<<< HEAD
       toast.error('Hasła nie są takie same');
+=======
+      toast.error('The passwords are not identical');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
     } else {
       try {
         const res = await register({ name, email, password }).unwrap();
@@ -50,6 +54,7 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
+<<<<<<< HEAD
       <h1>Rejestracja</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='name'>
@@ -57,6 +62,15 @@ const RegisterScreen = () => {
           <Form.Control
             type='name'
             placeholder='Wpisz imię'
+=======
+      <h1>Register</h1>
+      <Form onSubmit={submitHandler}>
+        <Form.Group className='my-2' controlId='name'>
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type='name'
+            placeholder='Enter name'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
@@ -66,33 +80,55 @@ const RegisterScreen = () => {
           <Form.Label>Email</Form.Label>
           <Form.Control
             type='email'
+<<<<<<< HEAD
             placeholder='Wpisz email'
+=======
+            placeholder='Enter email'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-2' controlId='password'>
+<<<<<<< HEAD
           <Form.Label>Hasło</Form.Label>
           <Form.Control
             type='password'
             placeholder='Wpisz hasło'
+=======
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Enter password'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
         <Form.Group className='my-2' controlId='confirmPassword'>
+<<<<<<< HEAD
           <Form.Label>Powtórz hasło</Form.Label>
           <Form.Control
             type='password'
             placeholder='Powtórz hasło'
+=======
+          <Form.Label>Confirm password</Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Confirm password'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Button disabled={isLoading} type='submit' variant='primary'>
+<<<<<<< HEAD
           Zarejestruj
+=======
+          Register
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         </Button>
 
         {isLoading && <Loader />}
@@ -100,9 +136,15 @@ const RegisterScreen = () => {
 
       <Row className='py-3'>
         <Col>
+<<<<<<< HEAD
         Masz już konto?{' '}
           <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
             Zaloguj się
+=======
+        Do you already have an account?{' '}
+          <Link to={redirect ? `/login?redirect=${redirect}` : '/login'}>
+            Log in
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           </Link>
         </Col>
       </Row>

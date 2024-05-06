@@ -23,7 +23,10 @@ const LoginScreen = () => {
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const redirect = sp.get('redirect') || '/';
+<<<<<<< HEAD
   const guest = sp.get('guest') === 'true';  
+=======
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
 
   useEffect(() => {
     if (userInfo) {
@@ -46,31 +49,50 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
+<<<<<<< HEAD
       <h1>Logowanie</h1>
+=======
+      <h1>Login</h1>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
 
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-3' controlId='email'>
           <Form.Label>Email</Form.Label>
           <Form.Control
             type='email'
+<<<<<<< HEAD
             placeholder='Wpisz email'
+=======
+            placeholder='Enter email'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Form.Group className='my-3' controlId='password'>
+<<<<<<< HEAD
           <Form.Label>Hasło</Form.Label>
           <Form.Control
             type='password'
             placeholder='Wpisz hasło'
+=======
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type='password'
+            placeholder='Enter password'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           ></Form.Control>
         </Form.Group>
 
         <Button disabled={isLoading} type='submit' variant='primary'>
+<<<<<<< HEAD
           Zaloguj się
+=======
+          Log in
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         </Button>
 
          {isLoading && <Loader />} 
@@ -78,6 +100,7 @@ const LoginScreen = () => {
 
       <Row className='py-3'>
         <Col>
+<<<<<<< HEAD
           Jesteś tu nowy?{' '}
           <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}> 
             Zarejestruj się
@@ -88,6 +111,13 @@ const LoginScreen = () => {
             <Link to="/guest-info">Zrób zakupy bez zakładania konta</Link>
           </Col>
         )}
+=======
+          Are you new?{' '}
+          <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}> 
+            Register
+          </Link>
+        </Col>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       </Row>
     </FormContainer>
   );

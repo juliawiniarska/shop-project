@@ -32,7 +32,11 @@ const UserEditScreen = () => {
     e.preventDefault();
     try {
       await updateUser({ userId, name, email, isAdmin }).unwrap();
+<<<<<<< HEAD
       toast.success('Uzytkonik zaktualizowany pomyślnie');
+=======
+      toast.success('User updated successfully');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       refetch();
       navigate('/admin/userlist');
     } catch (err) {
@@ -53,10 +57,17 @@ const UserEditScreen = () => {
   return (
     <>
       <Link to='/admin/userlist' className='btn btn-light my-3'>
+<<<<<<< HEAD
         Wróć
       </Link>
       <FormContainer>
         <h1>Edycja Użytkownika</h1>
+=======
+        Go back
+      </Link>
+      <FormContainer>
+        <h1>Edit User</h1>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         {loadingUpdate && <Loader />}
         {isLoading ? (
           <Loader />
@@ -67,10 +78,17 @@ const UserEditScreen = () => {
         ) : (
           <Form onSubmit={submitHandler}>
             <Form.Group className='my-2' controlId='name'>
+<<<<<<< HEAD
               <Form.Label>Imię</Form.Label>
               <Form.Control
                 type='name'
                 placeholder='Wpisz imię'
+=======
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type='name'
+                placeholder='Enter name'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
@@ -80,7 +98,11 @@ const UserEditScreen = () => {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type='email'
+<<<<<<< HEAD
                 placeholder='Wpisz email'
+=======
+                placeholder='Enter email'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               ></Form.Control>
@@ -96,7 +118,11 @@ const UserEditScreen = () => {
             </Form.Group>
 
             <Button type='submit' variant='primary'>
+<<<<<<< HEAD
               Zaktualizuj
+=======
+              Update
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </Button>
           </Form>
         )}

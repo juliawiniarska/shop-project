@@ -30,14 +30,22 @@ const PaymentScreen = () => {
   return (
     <FormContainer>
       <CheckoutSteps step1 step2 step3 />
+<<<<<<< HEAD
       <h1>Metoda płatności</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group>
           <Form.Label as='legend'>Wybierz metodę</Form.Label>
+=======
+      <h1>Payment Method</h1>
+      <Form onSubmit={submitHandler}>
+        <Form.Group>
+          <Form.Label as='legend'>Choose method</Form.Label>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           <Col>
             <Form.Check
               className='my-2'
               type='radio'
+<<<<<<< HEAD
               label='PayPal lub karta kredytowa'
               id='PayPal'
               name='paymentMethod'
@@ -55,15 +63,32 @@ const PaymentScreen = () => {
               checked={paymentMethod === 'Płatność przy odbiorze'}
               onChange={(e) => setPaymentMethod(e.target.value)}
             />
+=======
+              label='PayPal or Credit Card'
+              id='PayPal'
+              name='paymentMethod'
+              value='PayPal'
+              checked
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            ></Form.Check>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           </Col>
         </Form.Group>
 
         <Button type='submit' variant='primary'>
+<<<<<<< HEAD
           Kontynuuj
+=======
+          Continue
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         </Button>
       </Form>
     </FormContainer>
   );
 };
 
+<<<<<<< HEAD
 export default PaymentScreen;
+=======
+export default PaymentScreen;
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083

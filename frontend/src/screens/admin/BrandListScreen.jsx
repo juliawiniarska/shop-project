@@ -25,10 +25,17 @@ const BrandListScreen = () => {
     : data;
 
   const deleteHandler = async (id) => {
+<<<<<<< HEAD
     if (window.confirm('Na pewno chcesz usunąć?')) {
       try {
         await deleteBrand(id).unwrap();
         toast.success('Firma usunięta');
+=======
+    if (window.confirm('Are you sure you want to delete this brand?')) {
+      try {
+        await deleteBrand(id).unwrap();
+        toast.success('Brand deleted');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         refetch();
       } catch (err) {
         toast.error(err?.data?.message || 'Error occurred while deleting the brand');
@@ -42,6 +49,7 @@ const BrandListScreen = () => {
     <>
       <Row className='align-items-center mb-3'>
         <Col md={4}>
+<<<<<<< HEAD
           <h1>Firmy</h1>
         </Col>
         <Col md={4}>
@@ -49,6 +57,15 @@ const BrandListScreen = () => {
             <FormControl
               type="text"
               placeholder="Szukaj firmy..."
+=======
+          <h1>Brands</h1>
+        </Col>
+        <Col md={4}>
+          <Form inline>
+            <FormControl
+              type="text"
+              placeholder="Search brand..."
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               className="mr-sm-2"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -58,7 +75,11 @@ const BrandListScreen = () => {
         <Col className='text-end'>
         <LinkContainer to='/admin/brand/create'>
           <Button className='my-3'>
+<<<<<<< HEAD
             <FaPlus /> Dodaj firmę
+=======
+            <FaPlus /> Add Brand
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           </Button>
           </LinkContainer>
         </Col>
@@ -73,8 +94,13 @@ const BrandListScreen = () => {
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
+<<<<<<< HEAD
               <th>NAZWA</th>
               <th>AKCJE</th>
+=======
+              <th>NAME</th>
+              <th>ACTIONS</th>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </tr>
           </thead>
           <tbody>

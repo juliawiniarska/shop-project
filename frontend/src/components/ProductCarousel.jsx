@@ -53,7 +53,11 @@ const ProductCarousel = () => {
     <Message variant='danger'>{error?.data?.message || error.error}</Message>
   ) : (
     <div>
+<<<<<<< HEAD
       <h2 className='text-center mb-4'>Bestsellery 🔥</h2>
+=======
+      <h2 className='text-center mb-4'>Bestsellers 🔥</h2>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       <Carousel pause='hover' className='mb-4' interval={6000}>
         {splitProductsIntoPairs(products).map((pair, index) => (
            <Carousel.Item key={index}>
@@ -99,7 +103,11 @@ const ProductCarousel = () => {
                           </Form.Control>
                         )}
                     </div>
+<<<<<<< HEAD
                    <Button variant="primary" onClick={() => handleAddToCart(product)}>Dodaj do koszyka</Button>
+=======
+                   <Button variant="primary" onClick={() => handleAddToCart(product)}>Add to cart</Button>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                  </div>
                </Col>
              ))}
@@ -109,12 +117,21 @@ const ProductCarousel = () => {
       </Carousel>
       <Modal show={show} onHide={() => setShow(false)} centered>
         <Modal.Header closeButton>
+<<<<<<< HEAD
           <Modal.Title>Produkt dodany do koszyka</Modal.Title>
         </Modal.Header>
         <Modal.Body>{selectedProduct.name} został dodany do koszyka</Modal.Body>
         <Modal.Footer>
           <Button variant='secondary' onClick={() => setShow(false)}>Kontynuuj zakupy</Button>
           <Button variant='primary' onClick={() => navigate('/cart')}>Przejdź do koszyka</Button>
+=======
+          <Modal.Title>Product added to the cart</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>{selectedProduct.name} has been added to your cart</Modal.Body>
+        <Modal.Footer>
+          <Button variant='secondary' onClick={() => setShow(false)}>Continue shopping</Button>
+          <Button variant='primary' onClick={() => navigate('/cart')}>Go to cart</Button>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         </Modal.Footer>
       </Modal>
 

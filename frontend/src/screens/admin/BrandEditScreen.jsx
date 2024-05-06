@@ -32,36 +32,61 @@ const BrandEditScreen = () => {
         brandId,
         name,
       }).unwrap();
+<<<<<<< HEAD
       toast.success('Firma została zaktualizowana');
       navigate('/admin/brandlist');
     } catch (err) {
       toast.error(updateError?.data?.message || 'Nie udało się zaktualizować firmy');
+=======
+      toast.success('The brand has been updated');
+      navigate('/admin/brandlist');
+    } catch (err) {
+      toast.error(updateError?.data?.message || 'Failed to update the brand');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
     }
   };
 
   return (
     <>
       <Link to='/admin/brandlist' className='btn btn-light my-3'>
+<<<<<<< HEAD
         Wróć
       </Link>
       <FormContainer>
         <h1>Edycja Firmy</h1>
+=======
+        Go back
+      </Link>
+      <FormContainer>
+        <h1>Edit Brand</h1>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         {isLoadingDetails || isUpdating ? <Loader /> : errorDetails ? (
           <Message variant='danger'>{errorDetails.data?.message || 'Error loading brands data'}</Message>
         ) : (
             <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
+<<<<<<< HEAD
               <Form.Label>Nazwa</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Wpisz nazwę firmy'
+=======
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter brand name'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Button type='submit' variant='primary'>
+<<<<<<< HEAD
               Zaktualizuj
+=======
+              Update
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </Button>
           </Form>
         )}

@@ -19,7 +19,15 @@ import AdminRoute from './components/AdminRoute';
 import ProductListScreen from './screens/admin/ProductListScreen';
 import ProductEditScreen from './screens/admin/ProductEditScreen';
 import CartScreen from './screens/CartScreen';
+<<<<<<< HEAD
 import PrivateRoute from './components/PrivateRoute';
+=======
+import ShippingScreen from './screens/ShippingScreen';
+import PrivateRoute from './components/PrivateRoute';
+import PaymentScreen from './screens/PaymentScreen';
+import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import OrderScreen from './screens/OrderScreen';
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
 import ProfileScreen from './screens/ProfileScreen';
 import OrderListScreen from './screens/admin/OrderListScreen';
 import UserListScreen from './screens/admin/UserListScreen';
@@ -35,11 +43,14 @@ import CategoryEditScreen from './screens/admin/CategoryEditScreen';
 import BrandCreateScreen from './screens/admin/BrandCreateScreen';
 import BrandEditScreen from './screens/admin/BrandEditScreen';
 import BrandScreen from './screens/BrandScreen';
+<<<<<<< HEAD
 import OrderScreen from './screens/OrderScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import GuestInfoScreen from './screens/GuestInfoScreen';
+=======
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
 
 const router =createBrowserRouter(
   createRoutesFromElements(
@@ -55,6 +66,7 @@ const router =createBrowserRouter(
       <Route path='/register' element={<RegisterScreen />} />
       <Route path='/cart' element={<CartScreen />} />
       <Route path='/cart' element={<ShippingScreen />} />
+<<<<<<< HEAD
       <Route path='/order/:id' element={<OrderScreen />} />
         <Route path='/shipping' element={<ShippingScreen />} />
         <Route path='/payment' element={<PaymentScreen />} />
@@ -68,6 +80,18 @@ const router =createBrowserRouter(
       </Route>
 
       
+=======
+
+      <Route path='' element={<PrivateRoute />}>
+        <Route path='/shipping' element={<ShippingScreen />} />
+        <Route path='/payment' element={<PaymentScreen />} />
+        <Route path='/placeorder' element={<PlaceOrderScreen />} />
+        <Route path='/order/:id' element={<OrderScreen />} />
+        <Route path='/profile' element={<ProfileScreen />} />
+
+
+      </Route>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       <Route path='' element={<AdminRoute />}>
         <Route path='/admin/orderlist' element={<OrderListScreen />} />
         <Route path='/admin/productlist' element={<ProductListScreen />} />

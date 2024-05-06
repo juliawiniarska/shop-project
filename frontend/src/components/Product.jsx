@@ -21,7 +21,11 @@ const Product = ({ product }) => {
                     </Card.Title>
                 </Link>
                 <Card.Text as='div' className='product-rating'>
+<<<<<<< HEAD
                     <Rating value={product.rating} text={`${product.numReviews} ${product.numReviews === 0 ? 'opinii' : product.numReviews === 1 ? 'opinia' : product.numReviews < 5 ? 'opinie' : 'opinii'}`}  />
+=======
+                    <Rating value={product.rating} text={`${product.numReviews} reviews`} />
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 </Card.Text>
                 <Card.Text as='div' className='product-price'>
                     {product.price} zł

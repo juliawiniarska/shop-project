@@ -25,10 +25,17 @@ const CategoryListScreen = () => {
     : data;
 
   const deleteHandler = async (id) => {
+<<<<<<< HEAD
     if (window.confirm('Na pewno chcesz usunąć?')) {
       try {
         await deleteCategory(id).unwrap();
         toast.success('Kategoria usunięta');
+=======
+    if (window.confirm('Are you sure you want to delete this category?')) {
+      try {
+        await deleteCategory(id).unwrap();
+        toast.success('Category deleted');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         refetch();
       } catch (err) {
         toast.error(err?.data?.message || 'Error occurred while deleting the category');
@@ -42,6 +49,7 @@ const CategoryListScreen = () => {
     <>
       <Row className='align-items-center mb-3'>
         <Col md={4}>
+<<<<<<< HEAD
           <h1>Kategorie</h1>
         </Col>
         <Col md={4}>
@@ -49,6 +57,15 @@ const CategoryListScreen = () => {
             <FormControl
               type="text"
               placeholder="Szukaj kategorii..."
+=======
+          <h1>Categories</h1>
+        </Col>
+        <Col md={4}>
+          <Form inline>
+            <FormControl
+              type="text"
+              placeholder="Search category..."
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               className="mr-sm-2"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -58,7 +75,11 @@ const CategoryListScreen = () => {
         <Col className='text-end'>
         <LinkContainer to='/admin/category/create'>
           <Button className='my-3'>
+<<<<<<< HEAD
             <FaPlus /> Dodaj kategorię
+=======
+            <FaPlus /> Add Category
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           </Button>
           </LinkContainer>
         </Col>
@@ -73,9 +94,15 @@ const CategoryListScreen = () => {
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
+<<<<<<< HEAD
               <th>NAZWA</th>
               <th>OPIS</th>
               <th>AKCJE</th>
+=======
+              <th>NAME</th>
+              <th>DESCRIPTION</th>
+              <th>ACTIONS</th>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </tr>
           </thead>
           <tbody>

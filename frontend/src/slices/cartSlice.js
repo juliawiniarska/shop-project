@@ -3,6 +3,7 @@ import { updateCart } from '../utils/cartUtils';
 
 const initialState = localStorage.getItem('cart')
   ? JSON.parse(localStorage.getItem('cart'))
+<<<<<<< HEAD
   : { 
       cartItems: [], 
       shippingAddress: {}, 
@@ -13,6 +14,10 @@ const initialState = localStorage.getItem('cart')
       totalPrice: 0, 
       guestInfo: null 
     };
+=======
+  : { cartItems: [], shippingAddress: {}, paymentMethod: 'PayPal', itemsPrice: 0, shippingPrice: 0, taxPrice: 0, totalPrice: 0 };
+
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -45,6 +50,7 @@ const cartSlice = createSlice({
       state.paymentMethod = action.payload;
       localStorage.setItem('cart', JSON.stringify(state));
     },
+<<<<<<< HEAD
     setGuestInfo: (state, action) => {
       state.guestInfo = action.payload;
       localStorage.setItem('cart', JSON.stringify(state)); 
@@ -52,6 +58,10 @@ const cartSlice = createSlice({
     clearCartItems: (state) => {
       state.cartItems = [];
       state.guestInfo = null; 
+=======
+    clearCartItems: (state, action) => {
+      state.cartItems = [];
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       localStorage.setItem('cart', JSON.stringify(state));
     },
     resetCart: (state) => (state = initialState),
@@ -63,9 +73,16 @@ export const {
   removeFromCart,
   saveShippingAddress,
   savePaymentMethod,
+<<<<<<< HEAD
   setGuestInfo, 
+=======
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
   clearCartItems,
   resetCart,
 } = cartSlice.actions;
 
+<<<<<<< HEAD
 export default cartSlice.reducer;
+=======
+export default cartSlice.reducer;
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083

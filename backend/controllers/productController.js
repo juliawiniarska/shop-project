@@ -136,7 +136,11 @@ const createProductReview = asyncHandler(async (req, res) => {
 
     if (!boughtProduct) {
       res.status(400);
+<<<<<<< HEAD
       throw new Error('Tylko użytkownicy, którzy kupili dany produkt mogą dodać opinię');
+=======
+      throw new Error('Only users who have purchased the product can leave a review');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
     }
 
     const alreadyReviewed = product.reviews.find(
@@ -145,7 +149,11 @@ const createProductReview = asyncHandler(async (req, res) => {
 
     if (alreadyReviewed) {
       res.status(400);
+<<<<<<< HEAD
       throw new Error('Ten produkt został już przez ciebie oceniony');
+=======
+      throw new Error('You have already rated this product');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
     }
 
     const review = {
@@ -164,7 +172,11 @@ const createProductReview = asyncHandler(async (req, res) => {
       product.reviews.length;
 
     await product.save();
+<<<<<<< HEAD
     res.status(201).json({ message: 'Opinia dodana' });
+=======
+    res.status(201).json({ message: 'Review added' });
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
   } else {
     res.status(404);
     throw new Error('Product not found');

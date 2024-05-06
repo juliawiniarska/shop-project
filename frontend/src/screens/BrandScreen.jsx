@@ -14,12 +14,21 @@ const BrandScreen = () => {
   const [pageNumber, setPageNumber] = useState(1);
 
   const sortOptions = [
+<<<<<<< HEAD
     { value: 'default', label: 'Domyślnie' },
     { value: 'available', label: 'Dostępne' },
     { value: 'nameAsc', label: 'Nazwa, A do Z' },
     { value: 'nameDesc', label: 'Nazwa, Z do A' },
     { value: 'priceAsc', label: 'Cena, rosnąco' },
     { value: 'priceDesc', label: 'Cena, malejąco' },
+=======
+    { value: 'default', label: 'Default' },
+    { value: 'available', label: 'Available' },
+    { value: 'nameAsc', label: 'Name, A to Z' },
+    { value: 'nameDesc', label: 'Name, Z to A' },
+    { value: 'priceAsc', label: 'Price, ascending' },
+    { value: 'priceDesc', label: 'Price, descending' },
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
   ];
 
   const { data, isLoading, error } = useGetProductsByBrandQuery({
@@ -35,7 +44,11 @@ const BrandScreen = () => {
   return (
     <>
        <Meta />
+<<<<<<< HEAD
       <h1>{`Produkty firmy: ${brand}`}</h1>
+=======
+      <h1>{`Products by brand:${brand}`}</h1>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       <div className="sort-dropdown-container">
         <select value={sortOption} onChange={handleSortChange} className="sort-dropdown">
           {sortOptions.map(option => (

@@ -44,7 +44,11 @@ const Header = () => {
                         <SearchBox />
                         <LinkContainer to ='/cart'>
                         <Nav.Link >
+<<<<<<< HEAD
                             <FaShoppingCart /> Koszyk 
+=======
+                            <FaShoppingCart /> Cart 
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                             {
                             cartItems.length > 0 && (
                             <Badge pill bg='success' style={{ marginLeft: '5px' }}>
@@ -57,22 +61,34 @@ const Header = () => {
                         {userInfo ? (
                             <NavDropdown title={userInfo.name} id='username'>
                                 <LinkContainer to='/profile'>
+<<<<<<< HEAD
                                     <NavDropdown.Item>Profil</NavDropdown.Item>
                                 </LinkContainer>
                                 <NavDropdown.Item onClick={logoutHandler}>
                                     Wyloguj
+=======
+                                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                                </LinkContainer>
+                                <NavDropdown.Item onClick={logoutHandler}>
+                                    Log out
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                                 </NavDropdown.Item>
                             </NavDropdown>
                         ) : (
                             <LinkContainer to ='/login'>
                             <Nav.Link href='/login'>
+<<<<<<< HEAD
                                 <FaUser /> Zaloguj się 
+=======
+                                <FaUser /> Log in 
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                                 </Nav.Link>
                             </LinkContainer>
                         ) }
                         {userInfo && userInfo.isAdmin && (
                             <NavDropdown title='Admin' id='adminmenu'>
                                 <LinkContainer to='/admin/orderlist'>
+<<<<<<< HEAD
                                 <NavDropdown.Item>Zamówienia</NavDropdown.Item>
                             </LinkContainer>
                                 <LinkContainer to='/admin/productlist'>
@@ -86,6 +102,21 @@ const Header = () => {
                             </LinkContainer>
                             <LinkContainer to='/admin/userlist'>
                                 <NavDropdown.Item>Użytkownicy</NavDropdown.Item>
+=======
+                                <NavDropdown.Item>Orders</NavDropdown.Item>
+                            </LinkContainer>
+                                <LinkContainer to='/admin/productlist'>
+                            <NavDropdown.Item>Products</NavDropdown.Item>
+                                </LinkContainer>
+                            <LinkContainer to='/admin/categorylist'>
+                            <NavDropdown.Item>Categories</NavDropdown.Item>
+                                </LinkContainer>
+                            <LinkContainer to='/admin/brandlist'>
+                            <NavDropdown.Item>Brands</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to='/admin/userlist'>
+                                <NavDropdown.Item>Users</NavDropdown.Item>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                             </LinkContainer>
                             </NavDropdown>
                             

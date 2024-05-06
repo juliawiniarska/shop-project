@@ -45,36 +45,61 @@ const CategoryEditScreen = () => {
   return (
     <>
       <Link to='/admin/categorylist' className='btn btn-light my-3'>
+<<<<<<< HEAD
         Wróć
       </Link>
       <FormContainer>
         <h1>Edycja Kategorii</h1>
+=======
+        Go back
+      </Link>
+      <FormContainer>
+        <h1>Edit Category</h1>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         {isLoadingDetails || isUpdating ? <Loader /> : errorDetails ? (
           <Message variant='danger'>{errorDetails.data?.message || 'Error loading category data'}</Message>
         ) : (
             <Form onSubmit={submitHandler}>
             <Form.Group controlId='name'>
+<<<<<<< HEAD
               <Form.Label>Nazwa</Form.Label>
               <Form.Control
                 type='text'
                 placeholder='Wpisz nazwę'
+=======
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter category name'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 value={name}
                 onChange={(e) => setName(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Form.Group controlId='description'>
+<<<<<<< HEAD
               <Form.Label>Opis</Form.Label>
               <Form.Control
                 as='textarea'
                 placeholder='Wpisz opis'
+=======
+              <Form.Label>Description</Form.Label>
+              <Form.Control
+                as='textarea'
+                placeholder='Enter the category description'
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
             <Button type='submit' variant='primary'>
+<<<<<<< HEAD
               Zaktualizuj
+=======
+              Update
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </Button>
           </Form>
         )}

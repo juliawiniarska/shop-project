@@ -17,11 +17,19 @@ const UserListScreen = () => {
   const [showAdminsOnly, setShowAdminsOnly] = useState(false);
 
   const deleteHandler = async (id) => {
+<<<<<<< HEAD
     if (window.confirm('Na pewno chcesz usunąć?')) {
       try {
         await deleteUser(id).unwrap();
         refetch();
         toast.success('Użytkonik usunięty');
+=======
+    if (window.confirm('Are you sure you want to delete the user?')) {
+      try {
+        await deleteUser(id).unwrap();
+        refetch();
+        toast.success('User deleted');
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       } catch (err) {
         toast.error(err?.data?.message || 'An error occurred');
       }
@@ -38,6 +46,7 @@ const UserListScreen = () => {
     <>
       <Row className='align-items-center mb-3'>
         <Col md={3}>
+<<<<<<< HEAD
           <h1>Użytkownicy</h1>
         </Col>
         <Col md={5}>
@@ -45,6 +54,15 @@ const UserListScreen = () => {
             <FormControl
               type="text"
               placeholder="Szukaj po imieniu lub emailu"
+=======
+          <h1>Users</h1>
+        </Col>
+        <Col md={5}>
+          <Form inline>
+            <FormControl
+              type="text"
+              placeholder="Search by name or email"
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               className="mr-sm-2"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -53,6 +71,7 @@ const UserListScreen = () => {
         <Col md={2}>
           <Form.Check 
             type="checkbox" 
+<<<<<<< HEAD
             label="Pokaż admin" 
             onChange={(e) => setShowAdminsOnly(e.target.checked)} 
           />
@@ -62,6 +81,16 @@ const UserListScreen = () => {
           <LinkContainer to='/admin/user/create'>
             <Button>
               <i className='fas fa-plus'></i> Dodaj użytkownika
+=======
+            label="Show Admins" 
+            onChange={(e) => setShowAdminsOnly(e.target.checked)} 
+          />
+        </Col>
+        <Col md={2} className='text-right'>
+          <LinkContainer to='/admin/user/create'>
+            <Button>
+              <i className='fas fa-plus'></i> Add User
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </Button>
           </LinkContainer>
         </Col>
@@ -74,10 +103,17 @@ const UserListScreen = () => {
         <Table striped bordered hover responsive className='table-sm'>
           <thead>
             <tr>
+<<<<<<< HEAD
               <th>IMIĘ</th>
               <th>EMAIL</th>
               <th>ADMIN</th>
               <th>AKCJE</th>
+=======
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>ADMIN</th>
+              <th>ACTIONS</th>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
             </tr>
           </thead>
           <tbody>

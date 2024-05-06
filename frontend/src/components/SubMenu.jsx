@@ -52,7 +52,11 @@ function SubMenu() {
         onMouseOver={() => setShowBrands(true)}
         onMouseLeave={() => setShowBrands(false)}
       >
+<<<<<<< HEAD
         Firmy
+=======
+        Brands
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         {showBrands && (
           <div className="brands-dropdown">
             {brands?.map((brand) => (

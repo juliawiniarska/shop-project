@@ -29,9 +29,14 @@ const CartScreen = () => {
   };
 
   const checkoutHandler = () => {
+<<<<<<< HEAD
     navigate('/login?redirect=/shipping&guest=true');
   };
   
+=======
+    navigate('/login?redirect=/shipping');
+  };
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
 
   return (
     <Row>
@@ -39,7 +44,11 @@ const CartScreen = () => {
         <h1 style={{ marginBottom: '20px' }}>Koszyk</h1>
         {cartItems.length === 0 ? (
           <Message>
+<<<<<<< HEAD
             Twój koszyk jest pusty <Link to='/'>Wróć do sklepu</Link>
+=======
+            Your cart is empty <Link to='/'>Return to the store</Link>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           </Message>
         ) : (
           <ListGroup variant='flush'>
@@ -88,8 +97,13 @@ const CartScreen = () => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
+<<<<<<< HEAD
               Podsumowanie ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
                 Produkty
+=======
+              Summary ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                Products
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               </h2>
               {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
@@ -103,7 +117,11 @@ const CartScreen = () => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
+<<<<<<< HEAD
                 Przejdź do płatności
+=======
+                Proceed to payment
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
               </Button>
             </ListGroup.Item>
           </ListGroup>

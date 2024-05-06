@@ -7,10 +7,14 @@ export const orderApiSlice = apiSlice.injectEndpoints({
       query: (order) => ({
         url: ORDERS_URL,
         method: 'POST',
+<<<<<<< HEAD
         body: { 
           ...order,
           discountCode: order.discountCode, 
         },
+=======
+        body: { ...order },
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
       }),
     }),
     getOrderDetails: builder.query({

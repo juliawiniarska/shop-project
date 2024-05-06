@@ -57,7 +57,11 @@ export const HomeScreen = () => {
         </>
       ) : (
         <Link to="/" className="btn btn-light mb-4">
+<<<<<<< HEAD
           Wróć do strony głównej
+=======
+          Go back to the main page
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
         </Link>
       )}
       {isLoading ? (
@@ -67,7 +71,11 @@ export const HomeScreen = () => {
       ) : (
         <>
           <Meta />
+<<<<<<< HEAD
           <h1>✨Najnowsze produkty✨</h1>
+=======
+          <h1>✨Latest products✨</h1>
+>>>>>>> b803ed024893d9ac2b7be1375f9953a59d94e083
           <Row className="equal-height-cols justify-content-center">
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={4}>
